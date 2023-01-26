@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"installed_packages":
+	[
+		"A File Icon",
+		"BracketHighlighter",
+		"ColorPicker",
+		"FileDiffs",
+		"Git",
+		"MarkdownEditing",
+		"Package Control",
+		"SideBarEnhancements",
+		"Theme - Flatland",
+	],
+	"in_process_packages":
+	[
+	],
+}
