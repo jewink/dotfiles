@@ -1,0 +1,93 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  - trigger: ".d "
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y%m%d"
+
+  - trigger: ".t "
+    replace: "{{mytime}}"
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%H%M"
+
+  - trigger: ".dt "
+    replace: "{{mydatetime}}"
+    vars:
+      - name: mydatetime
+        type: date
+        params:
+          format: "%Y%m%d-%H%M%S"
+
+  - trigger: ".cb "
+    replace: "{{clipboard}}"
+    vars:
+      - name: clipboard
+        type: clipboard
+
+  - trigger: ".gj "
+    replace: "Gruß\nJens"
+
+  - trigger: ".mfg "
+    replace: "Mit freundlichen Grüßen\nJens Winklbauer"    
+
+  # Print the output of a shell command
+  - trigger: ".shell "
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo 'Hello from your shell'"
+
+  - trigger: ":greet"
+    form: |
+      Hey [[name]],
+      [[text]]
+      Happy Birthday!
+    form_fields:
+      text:
+        multiline: true
+  
+  - trigger: ":form"
+    form: |
+      [[choices]]
+    form_fields:
+      choices:
+        type: list
+        values:
+          - First choice
+          - Second choice
+
+  - trigger: ":file"
+    replace: "{{form1.file}}"
+    vars:
+      - name: files
+        type: shell
+        params:
+          cmd: "find ~/Dokumente -maxdepth 1"
+      - name: form1
+        type: form
+        params:
+          layout: |
+            Select file:
+            [[file]]
+          fields:
+            file:
+              type: list
+              values: "{{files}}"
+
+  # And much more! For more information, visit the docs: https://espanso.org/docs/
