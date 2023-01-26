@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>Terminal</icon>
+	<name>Open Terminal</name>
+	<submenu>Tools</submenu>
+	<unique-id>1367866030392833-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>stock_folder</icon>
+	<name>Thunar Root</name>
+	<submenu></submenu>
+	<unique-id>1367866030392883-2</unique-id>
+	<command>pkexec thunar %f</command>
+	<description>Thunar Root</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>system-search</icon>
+	<name>Search</name>
+	<submenu>Tools</submenu>
+	<unique-id>1367866030392913-3</unique-id>
+	<command>catfish %f</command>
+	<description>find files and folders</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>/home/jens/bin/peazip_portable-7.7.0.LINUX.x86_64.GTK2/FreeDesktop_integration/peazip.png</icon>
+	<name>Peazip</name>
+	<submenu>Tools</submenu>
+	<unique-id>1612471159930364-2</unique-id>
+	<command>/home/jens/bin/peazip_portable-7.7.0.LINUX.x86_64.GTK2/peazip %f</command>
+	<description>Mit Peazip öffnen</description>
+	<range></range>
+	<patterns>*.zip;*.rar;*.7z;*.gzip;*.tgz</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>folder_color_aqua</icon>
+	<name>New Folder</name>
+	<submenu></submenu>
+	<unique-id>1612473561534689-3</unique-id>
+	<command>mkdir &quot;`zenity --entry --height=100 --width=400 --text=&quot;Neuer Ordner anlegen&quot; --entry-text=&quot;Neuer Ordner&quot;`&quot;</command>
+	<description>New Folder</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>application-executable</icon>
+	<name>Make executable</name>
+	<submenu>Tools</submenu>
+	<unique-id>1612474049313680-5</unique-id>
+	<command>chmod +x %N</command>
+	<description>Make executable</description>
+	<range></range>
+	<patterns>*.sh;*.AppImage</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>disk-usage-analyzer</icon>
+	<name>Disk usage</name>
+	<submenu>Tools</submenu>
+	<unique-id>1612549076833901-6</unique-id>
+	<command>du -chs --apparent-size %N | zenity --text-info</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>meld</icon>
+	<name>Compare files</name>
+	<submenu>Tools</submenu>
+	<unique-id>1673805175847668-1</unique-id>
+	<command>meld %N</command>
+	<description>Compare</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<other-files/>
+	<text-files/>
+</action>
+</actions>
